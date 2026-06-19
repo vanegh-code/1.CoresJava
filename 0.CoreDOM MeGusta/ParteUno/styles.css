@@ -1,0 +1,77 @@
+CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Tarjeta */
+.tarjeta {
+    background-color: #f4f4f4;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.nombre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.meGusta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.like-count {
+    font-size: 16px;
+    color: #000000;
+}
+
+
+.like-btn {
+    background-color: #ffd700; 
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Párrafo  */
+p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.4;
+}
+
+.enlace {
+    color: #0000ff;
+    text-decoration: underline;
+}

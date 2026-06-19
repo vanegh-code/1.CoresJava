@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Barra Superior */
+.navbar {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Layout de dos columnas */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Columna aside Izquierda */
+.izquierda {
+    flex: 1;
+    max-width: 220px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.tarjetaPerfil {
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    fill: #000000;
+    margin-bottom: 15px;
+    border-radius: 55px;
+    padding: 5%;
+}
+
+.tarjetaPerfil h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Columna Sección de Derecha */
+.derecha {
+    flex: 3;
+}
+
+.feed-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Tarjetas  */
+article {
+    background-color: #f4f4f4;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.nombre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.nombre h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.likes-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contarLikes {
+    font-size: 16px;
+}
+
+/* Botón Like Amarillo */
+.btn-like {
+    background-color: #ffd700;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-like:hover {
+    background-color: #e6c200;
+}
+
+/* Contenidos y Links */
+.contenido {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.contenido a {
+    color: #0000ff;
+    text-decoration: underline;
+}
