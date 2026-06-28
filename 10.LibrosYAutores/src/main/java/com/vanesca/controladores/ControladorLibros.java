@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
-
 @Controller
 public class ControladorLibros {
 
@@ -24,8 +22,7 @@ public class ControladorLibros {
 		listaLibros.put("El Hobbit", "J.R.R. Tolkien");	
 		listaLibros.put("El alquimista", "Paulo Coelho");	
 	}
-	
-	// 1. Método que responde a la ruta /libros y retorna libros.jsp
+		// 1. Método que responde a la ruta /libros y retorna libros.jsp
 	
 		@GetMapping("/libros")
 		public String obtenerTodosLosLibros(Model modelo) {
@@ -34,8 +31,7 @@ public class ControladorLibros {
 			modelo.addAttribute("listaLibros", listaLibros.keySet());
 			return "libros.jsp";
 		}
-		
-		// 2. Método que responde a la ruta /libros/{nombre} y retorna detalleLibro.jsp
+				// 2. Método que responde a la ruta /libros/{nombre} y retorna detalleLibro.jsp
 		@GetMapping("/libros/{nombre}")
 		public String obtenerInformacionDelLibro(@PathVariable("nombre") String nombre, Model modelo) {
 			if (listaLibros.containsKey(nombre)) {
@@ -48,24 +44,24 @@ public class ControladorLibros {
 			}
 			return "detalleLibro.jsp";
 		}
-		
-		// 3. Método que responde a la ruta /libros/formulario y retorna formularioLibros.jsp
+				// 3. Método que responde a la ruta /libros/formulario y retorna formularioLibros.jsp
 		@GetMapping("/libros/formulario")
 		public String formularioLibro() {
 			return "formularioLibros.jsp";
 		}
-		
-		// 4. Método que responde a la ruta /procesar/libro mediante POST y redirecciona
+				// 4. Método que responde a la ruta /procesar/libro mediante POST y redirecciona
 		@PostMapping("/procesar/libro")
 		public String procesarLibro(@RequestParam("nombreLibro") String nombreLibro, 
 				                    @RequestParam("nombreAutor") String nombreAutor) {
-			
 			// Guardamos el nuevo libro recibido desde el formulario
 			listaLibros.put(nombreLibro, nombreAutor);
-			
 			// Redireccionamos limpiamente a la ruta de la lista
 			return "redirect:/libros";
 		}
-	
-	
-}
+		// 5. Método que procesa la búsqueda y redirige a la vista de detalle
+		@GetMapping("/libros/buscar")
+		public String buscarLibro(@RequestParam("nombreLibro") String nombreLibro) {
+			// Redirige dinámicamente a la ruta de detalle /libros/{nombre}
+			return "redirect:/libros/" + nombreLibro;
+		}
+	}

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Formulario Libro</title>
 </head>
 <body>
 <h1>Dar de Alta un Nuevo Libro</h1>

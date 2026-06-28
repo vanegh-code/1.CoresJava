@@ -7,6 +7,7 @@ package com.vanesca.controladores;
 	import org.springframework.web.bind.annotation.GetMapping;
 	import org.springframework.web.bind.annotation.PathVariable;
 
+
 	@Controller
 	public class ControladorRecetas {
 
@@ -43,14 +44,15 @@ package com.vanesca.controladores;
 	        // Buscamos si la receta existe en nuestro HashMap
 	        if(recetasConIngredientes.containsKey(nombre)) {
 	        	modelo.addAttribute("ingredientes", recetasConIngredientes.get(nombre));
+	        	
 	        } else {
 	        	 // Si no existe, mandamos un indicador de error y el mensaje solicitado
+	        	 
 	        	   modelo.addAttribute("mensajeError", "La receta no se encuentra en nuestra lista.");
 
 	        }
 	            
-	        
-	    	
+	        	    	
 	        return "detalleReceta.jsp"; 
 	        // Redirige a detalleReceta.jsp
 	    }

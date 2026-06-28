@@ -10,9 +10,7 @@
 <body>
 
     <c:choose>
-		
- 		-- Si la receta existe, mostramos los detalles 
-        <c:when test="${not empty ingredientes}">
+		    <c:when test="${not empty ingredientes}">
             <h1>Receta: ${nombreReceta}</h1>
             <h3>Ingredientes:</h3>
             <ul>
@@ -22,8 +20,7 @@
             </ul>
         </c:when>
         
-  		-- Si no existe, mostramos el mensaje de error 
-        <c:otherwise>
+  	        <c:otherwise>
             <h2 style="color: red;">${mensajeError}</h2>
         </c:otherwise>
     </c:choose>

@@ -11,6 +11,13 @@
 <body>
     <h1>Catálogo de Libros</h1>
     
+    
+    <!--  Formulario de búsqueda -->
+    <form action="/libros/buscar" method="GET">
+        <input type="text" name="nombreLibro" placeholder="Escribe el nombre del libro..." required>
+        <button type="submit">Buscar Libro</button>
+    </form>
+    <br>
     <ul>
         <c:forEach var="libro" items="${listaLibros}">
             <li>
